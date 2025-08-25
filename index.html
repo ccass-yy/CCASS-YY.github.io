@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致我唯一的女孩</title>
+    <style>
+        body {
+            font-family: 'Ma Shan Ting', 'STXingkai', 'Microsoft YaHei', sans-serif;
+            background-color: #ffe6f2; /* 淡粉色背景 */
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+            background-image: linear-gradient(to bottom right, #ffe6f2, #e6f2ff); /* 粉到蓝的渐变 */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff9ecb;
+        }
+        h1 {
+            color: #ff4d94;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .photo-container {
+            margin: 30px auto;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #fff;
+        }
+        .photo-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .photo-container img:hover {
+            transform: scale(1.03);
+        }
+        .message {
+            line-height: 1.8;
+            font-size: 1.2em;
+            margin: 30px 0;
+            text-align: left;
+            background-color: #fffae6;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ffcc00;
+        }
+        .days-counter {
+            font-size: 1.5em;
+            color: #ff6b6b;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .heart {
+            color: #ff4d94;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        /* 响应式设计 - 在手机上看起来也很好 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+    <!-- 引入中文字体 -->
+    <link href="https://fonts.googleapis.cnpmjs.org/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>致我最爱的<span class="heart">❤</span>【杨洋-山山宝宝】</h1>
+        
+        <div class="days-counter">
+            这是我们相遇的第 <span id="days">0</span> 天
+        </div>
+
+        <!-- 这里是照片区域 -->
+        <div class="photo-container">
+            < img src="【https://files.catbox.moe/2d01zx.jpg】" alt="我们的记忆">
+        </div>
+
+        <!-- 这里是你的留言 -->
+        <div class="message">
+            <p>亲爱的【杨洋】：</p >
+            <p>【请原谅我 此前是如此愚昧和无知 自从回去以后 每一天的白天深夜我都在思念着你 你的温暖 你的爱】</p >
+            <p>我从来不是一个会说话的人，但有些话我一定要告诉你。遇见你，是我这辈子最幸运的事，还记得那天【下着大雨第一次见到你 我很紧张 是你主动将我搂到伞中 给足了我所有的温暖  】山山 你做的菜真的很好吃 我喜欢的东西讨厌的东西你都会记住并给我带来惊喜。</p >
+            <p>我永远珍惜我们在一起的每一个瞬间，无论是【早晨的问候】还是【夜晚的安慰】，都因为和你一起而变得意义非凡 如果有机会 下次见面我会把缺失的爱以十倍百倍奉还给你。</p >
+            <p>这个七夕，我无法送上昂贵的礼物，但我想送你我最真挚的心意。我爱你。</p >
+            <p>—— 永远爱你的【辰辰】</p >
+        </div>
+
+        <!-- 可以放更多照片 -->
+        <!-- <div class="photo-container">
+            < img src="【https://files.catbox.moe/xrhjm1.jpg】" alt="我们的另一张记忆">
+        </div> -->
+
+    </div>
+
+    <script>
+        // 计算相遇天数
+        var startDate = new Date("2022-8-24"); //【重要】这里改成你们相遇的那天，格式是 年-月-日
+        var today = new Date();
+        var timeDiff = today.getTime() - startDate.getTime();
+        var daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+        document.getElementById("days").innerText = daysDiff;
+    </script>
+</body>
+</html>
